@@ -4,9 +4,10 @@
 
 from ljd.util.log import errprint
 
-_MAGIC = b'\x1bLJ'
+_MAGIC = b'\x1bPO'
 
 _MAX_VERSION = 0x80
+_LAPIS_VERSION = 0x82
 
 _FLAG_IS_BIG_ENDIAN = 0b00000001
 _FLAG_IS_STRIPPED = 0b00000010
@@ -55,7 +56,7 @@ def _check_magic(state):
 def _read_version(state, header):
     header.version = state.stream.read_byte()
 
-    if header.version > _MAX_VERSION:
+    if header.version > _MAX_VERSION and header.version != _LAPIS_VERSION:
         errprint("Version {0}: proprietary modifications",
                  header.version)
         return False

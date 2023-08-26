@@ -45,8 +45,9 @@ def read(parser, prototype):
 
     r = r and _read_flags(parser, prototype)
     r = r and _read_counts_and_sizes(parser, prototype)
+    r = r and _read_constants0(parser, prototype)
     r = r and _read_instructions(parser, prototype)
-    r = r and _read_constants(parser, prototype)
+    r = r and _read_constants1(parser, prototype)
     r = r and _read_debuginfo(parser, prototype)
 
     end = parser.stream.pos
@@ -144,3 +145,11 @@ def _read_debuginfo(stream, prototype):
     return ljd.rawdump.debuginfo.read(stream,
                                       prototype.first_line_number,
                                       prototype.debuginfo)
+
+
+def _read_constants0(parser, prototype):
+    return ljd.rawdump.constants.read0(parser, prototype.constants)
+
+
+def _read_constants1(parser, prototype):
+    return ljd.rawdump.constants.read1(parser, prototype.constants)

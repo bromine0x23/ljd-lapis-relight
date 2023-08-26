@@ -277,7 +277,7 @@ def _build_jump_warp(state, last_addr, instructions):
     last = instructions[-1]
     opcode = 256 if len(instructions) == 1 else instructions[-2].opcode
 
-    if opcode <= ins.ISF.opcode:
+    if ins.ISLT.opcode <= opcode <= ins.ISGT.opcode or ins.ISEQV.opcode <= opcode <= ins.ISF.opcode:
         assert last.opcode != ins.ISNEXT.opcode
         return _build_conditional_warp(state, last_addr, instructions)
     else:

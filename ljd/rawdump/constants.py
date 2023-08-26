@@ -174,3 +174,20 @@ def _read_table_item(parser):
         assert data_type == BCDUMP_KTAB_NIL
 
         return None
+
+
+def read0(parser, constants):
+    r = True
+
+    r = r and _read_upvalue_references(parser, constants.upvalue_references)
+
+    return r
+
+
+def read1(parser, constants):
+    r = True
+
+    r = r and _read_complex_constants(parser, constants.complex_constants)
+    r = r and _read_numeric_constants(parser, constants.numeric_constants)
+
+    return r

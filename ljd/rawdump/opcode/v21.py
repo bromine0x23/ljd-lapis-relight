@@ -12,34 +12,34 @@ _OPCODES = (
     (0x02, instructions.ISLE),  # @UndefinedVariable
     (0x03, instructions.ISGT),  # @UndefinedVariable
 
-    (0x04, instructions.ISEQV),  # @UndefinedVariable
-    (0x05, instructions.ISNEV),  # @UndefinedVariable
+    (0x08, instructions.ISEQV),  # @UndefinedVariable
+    (0x09, instructions.ISNEV),  # @UndefinedVariable
 
-    (0x06, instructions.ISEQS),  # @UndefinedVariable
-    (0x07, instructions.ISNES),  # @UndefinedVariable
+    (0x0A, instructions.ISEQS),  # @UndefinedVariable
+    (0x0B, instructions.ISNES),  # @UndefinedVariable
 
-    (0x08, instructions.ISEQN),  # @UndefinedVariable
-    (0x09, instructions.ISNEN),  # @UndefinedVariable
+    (0x0C, instructions.ISEQN),  # @UndefinedVariable
+    (0x0D, instructions.ISNEN),  # @UndefinedVariable
 
-    (0x0A, instructions.ISEQP),  # @UndefinedVariable
-    (0x0B, instructions.ISNEP),  # @UndefinedVariable
+    (0x0E, instructions.ISEQP),  # @UndefinedVariable
+    (0x0F, instructions.ISNEP),  # @UndefinedVariable
 
     # Unary test and copy ops
 
-    (0x0C, instructions.ISTC),  # @UndefinedVariable
-    (0x0D, instructions.ISFC),  # @UndefinedVariable
+    (0x10, instructions.ISTC),  # @UndefinedVariable
+    (0x11, instructions.ISFC),  # @UndefinedVariable
 
-    (0x0E, instructions.IST),  # @UndefinedVariable
-    (0x0F, instructions.ISF),  # @UndefinedVariable
-    (0x10, instructions.ISTYPE),  # @UndefinedVariable
-    (0x11, instructions.ISNUM),  # @UndefinedVariable
+    (0x12, instructions.IST),  # @UndefinedVariable
+    (0x13, instructions.ISF),  # @UndefinedVariable
+    (0x14, instructions.ISTYPE),  # @UndefinedVariable
+    (0x15, instructions.ISNUM),  # @UndefinedVariable
 
     # Unary ops
 
-    (0x12, instructions.MOV),  # @UndefinedVariable
-    (0x13, instructions.NOT),  # @UndefinedVariable
-    (0x14, instructions.UNM),  # @UndefinedVariable
-    (0x15, instructions.LEN),  # @UndefinedVariable
+    (0x04, instructions.MOV),  # @UndefinedVariable
+    (0x05, instructions.NOT),  # @UndefinedVariable
+    (0x06, instructions.UNM),  # @UndefinedVariable
+    (0x07, instructions.LEN),  # @UndefinedVariable
 
     # Binary ops
 
